@@ -2,26 +2,90 @@
 for i in 0.1 0.5 1.0 2.0
 do
     #ordinary
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 1 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 10 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 3 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --vis 1
-    # python automap_main_inference.py --gpu 1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
 
     #smoothing 
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 1 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 10 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 3 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
-    # python automap_main_inference.py --gpu 1 --pkl Sep22 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.1
+done
+
+
+for i in 0.1 0.5 1.0 2.0
+do
+    #ordinary
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+
+    #smoothing 
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.5
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.5
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.5
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.5
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.5
+done
+
+
+for i in 0.1 0.5 1.0 2.0
+do
+    #ordinary
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+
+    #smoothing 
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 1.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 1.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 1.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 1.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 1.0
+done
+
+
+for i in 0.1 0.5 1.0 2.0
+do
+    #ordinary
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+
+    #smoothing 
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 3.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 3.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 3.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 3.0
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 3.0
+done
+
+
+for i in 0.1 0.5 1.0 2.0
+do
+    #ordinary
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+    #python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga #--vis 1
+
+    #smoothing 
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --org 1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.01
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --spc 1 --jaj 1 --gma 30 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.01
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.01
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --adv 1 --itr 6 --alp 0.5 --eps 0.05 --asc pga --smp 15 --std 0.1 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.01
+    python automap_main_inference.py --gpu 0,1 --pkl Dec7 --smt 1 --smp 15 --std 0.1 --sts 6 --wmp 0 --atk 1 --a_itr 5 --a_alp 15.0 --a_eps $i --a_asc pga --atxs 1 --a_smp 100 --a_std 0.01
 done
 
 
